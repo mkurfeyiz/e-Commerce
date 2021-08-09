@@ -1,0 +1,179 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h5{
+  color: #FF5959;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+p{
+  color: #4F9DA6;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.navbar{
+  padding: 1% 0 1.5rem;
+}
+
+.nav-item{
+  position: relative;
+  font-size: 1rem;
+  padding: 0 1%;
+
+}
+
+.right{
+  position: relative;
+  padding-left: 180%;
+}
+
+.right-text{
+  font-size: 1rem;
+}
+
+.nav-icon{
+  font-size: 1.2rem;
+  padding: 5%;
+}
+
+.exit-icon{
+  padding-left: 5px;
+  color: #233142;
+}
+
+.carousel-img{
+  width: 40%;
+  height: 40%;
+}
+
+.subtitle{
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FACF5A;
+  padding: 3% 5%;
+  border-style: none none solid none;
+  border-radius: 50%;
+  margin-top: -1%;
+  margin-bottom: 4%;
+
+}
+
+.carousel-caption{
+  position: absolute;
+  background-color: #F7F3E9;
+  opacity: 70%;
+  margin: 0 3% -2% 3%;
+  padding: 2% 3%;
+  z-index: 1;
+  text-align: left;
+}
+
+.category-img{
+  width: 87%;
+  height: 87%;
+  transition: transform .3s;
+  border-radius: 2%;
+
+  filter: grayscale(90%);
+}
+
+.category-img:hover{
+  box-shadow: 8px 8px 5px #233142;
+  transform: scale(1.1);
+  filter: grayscale(0);
+
+}
+
+.col2{
+  margin-top: 2%;
+  margin-bottom: 2.3%;
+}
+
+.category-text{
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #FACF5A;
+}
+
+.featured-title{
+  text-align: left;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FACF5A;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.featured-img{
+  border: 1px;
+  border-style: solid;
+  border-color: #E6E6FA	;
+}
+
+.card-body{
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-text{
+  font-size: 1rem;
+}
+
+#featured-col h5{
+  font-size: 1.5rem;
+  color: #233142;
+}
+
+#featured-col .btn{
+  background-color: #FF5959;
+  color: white;
+  margin-top: 7%;
+}
+
+#featured-col .btn:hover{
+  background-color: #FA8072;
+}
+
+#featured-section{
+  background-color: white;
+  margin: 2%  0;
+}
+
+#featured-col{
+  margin-left: 2%;
+}
+
+#category-section{
+  background-color: #233142;
+}
+
+#site-name{
+  font-weight: 650;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  padding: 2% 2% 2% 0;
+}
+
+#nav-main{
+  background-color: #233142;
+}
+
+#navbar-section{
+  background-color: #233142;
+  margin-bottom: 2%;
+}
+
+#dropdown{
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #233142;
+}
+
+#featured-carousel{
+  padding: 1% 10%;
+}
