@@ -32,7 +32,7 @@
     <div class="container-fluid">
       <!-- navbar -->
       <nav class="navbar navbar-expand-md navbar-dark" id="nav-main">
-        <a href="#" class="navbar-brand" id="site-name">e-Commerce</a>
+        <a href="#navbar-section" class="navbar-brand" id="site-name">e-Commerce</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
               <a href="main.html" class="nav-link">Mağaza</a>
             </li>
             <li class="nav-item">
-              <a href="main.html" class="nav-link">Bize Ulaşın</a>
+              <a href="main.html" class="nav-link">İletişim</a>
             </li>
             <li class="nav-item right dropdown">
               <div class="btn-group" role="group">
@@ -66,7 +66,9 @@
                     <a href="#" id="dropdown">Çıkış <i class="exit-icon fas fa-sign-out-alt"></i></a>
                   </li>
                 </ul>
-                <button type="button" class="btn btn-lg btn-outline-light"><i class="nav-icon fas fa-shopping-cart"></i></button>
+                <button type="button" id="cart" class="btn btn-lg btn-outline-light"><i class="nav-icon fas fa-shopping-cart"></i>
+                  <span class="badge bg-secondary">0</span>
+                </button>
               </div>
             </li>
 
@@ -166,62 +168,86 @@
 
     <div class="row">
       <!-- first row -->
-      <div id="featured-col" class="col-md-2">
+      <div class="col-md-2 featured-col">
         <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Tişört</h5>
             <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
             <!-- direct to modals -->
-            <a href="#" class="btn ">İncele <i class="fas fa-eye"></i></a>
+            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
           </div>
         </div>
 
       </div>
-      <div id="featured-col" class="col-md-2">
+      <div class="col-md-2 featured-col">
+        <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tişört</h5>
+            <h6 class="card-subtitle mb-2 text-muted">55.00 TL</h6>
+            <!-- direct to modals -->
+            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2 featured-col">
+        <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tişört</h5>
+            <h6 class="card-subtitle mb-2 text-muted">40.00 TL</h6>
+            <!-- direct to modals -->
+            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2 featured-col">
         <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Tişört2</h5>
-            <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
+            <h5 class="card-title">Pantolon</h5>
+            <h6 class="card-subtitle mb-2 text-muted">120.00 TL</h6>
             <!-- direct to modals -->
-            <a href="#" class="btn ">İncele <i class="fas fa-eye"></i></a>
+            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
           </div>
         </div>
 
       </div>
-      <div id="featured-col" class="col-md-2">
+      <div class="col-md-2 featured-col">
+        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Gömlek</h5>
+            <h6 class="card-subtitle mb-2 text-muted">75.00 TL</h6>
+            <!-- direct to modals -->
+            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2 featured-col">
+        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Şort</h5>
+            <h6 class="card-subtitle mb-2 text-muted">35.00 TL</h6>
+            <!-- direct to modals -->
+            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2 featured-col">
         <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Tişört</h5>
-            <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
+            <h6 class="card-subtitle mb-2 text-muted">48.90 TL</h6>
             <!-- direct to modals -->
-            <a href="#" class="btn ">İncele <i class="fas fa-eye"></i></a>
-          </div>
-        </div>
-
-      </div>
-      <div id="featured-col" class="col-md-2">
-        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tişört</h5>
-            <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#" class="btn ">İncele <i class="fas fa-eye"></i></a>
-          </div>
-        </div>
-
-      </div>
-      <div id="featured-col" class="col-md-2">
-        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tişört</h5>
-            <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#" class="btn ">İncele <i class="fas fa-eye"></i></a>
+            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
           </div>
         </div>
 
@@ -230,25 +256,47 @@
     </div>
   </section>
 
+  <!-- footer section -->
+  <section id="footer-section">
+    <a href="https://www.facebook.com"><i class="footer-icon fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com"><i class="footer-icon fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com"><i class="footer-icon fab fa-instagram"></i></a>
+    <p class="footer-p">© Copyright 2021 e-Commerce</p>
+  </section>
+
   <!-- modals -->
-  <div class="modal" tabindex="-1">
+  <!-- inspect modal -->
+  <div id="inspect-modal" class="modal" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title">Modal Title</h5>
+          <button type="button" class="btn-close inspect-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img src="images/summer-sale.jpg" alt="">
+          <img class="inspect-img" src="" alt="item.jpg">
+          <h6 class="inspect-text modal-price">Fiyat : </h6>
+          <h6 class="inspect-text modal-count">Adet :
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary decrease">-</button>
+              <input type="text" style="width: 3rem; text-align: center" value="1"></input>
+              <button type="button" class="btn btn-secondary increase">+</button>
+            </div>
+          </h6>
+          <h6 class="inspect-text description">Ürün Açıklaması : <h6 class="inspect-text modal-caption"></h6>
+          </h6>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <!--
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-success">Sepete Ekle <i class="fas fa-plus-circle"></i>
+          </button>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- cart modal -->
   <div id="cart-modal" class="modal" tabindex="-1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
@@ -257,10 +305,37 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <img src="images/summer-sale.jpg" style="width: 50%; height: 50%;" alt="">
+          <table class="table table-danger">
+            <caption class="cart-sum">Toplam : </caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ürün</th>
+                <th scope="col">Adet</th>
+                <th scope="col">Fiyat</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="table table-light">
+                <td class="cart-item"><img class="cart-item-img" src="images/summer-sale.jpg" alt=""> </td>
+                <td class="cart-item cart-item-name">ÜrünAd</td>
+                <td class="cart-item cart-item-count">adet</td>
+                <td class="cart-item cart-item-price">fiyat</td>
+              </tr>
+              <tr class="table table-light">
+                <td class="cart-item"><img class="cart-item-img" src="images/watch.jpg" alt=""> </td>
+                <td class="cart-item cart-item-name">ÜrünAd</td>
+                <td class="cart-item cart-item-count">adet</td>
+                <td class="cart-item cart-item-price">fiyat</td>
+              </tr>
+            </tbody>
+
+          </table>
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger">Alışverişi Tamamla</button>
+          <button type="button" class="btn btn-success">Alışverişi Tamamla</button>
         </div>
       </div>
     </div>
