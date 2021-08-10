@@ -10,7 +10,7 @@ h5{
 }
 
 p{
-  color: #4F9DA6;
+  color: #233142;
   font-size: 1.3rem;
   font-weight: 300;
 }
@@ -21,8 +21,7 @@ p{
 }
 
 .right{
-  position: relative;
-  padding-left: 130%;
+  margin-left: 0;
 }
 
 .right-text{
@@ -188,6 +187,19 @@ p{
   height: 50px;
 }
 
+.cart-item{
+  vertical-align: middle;
+}
+
+.delete-item{
+  /*margin-top: -15%;*/
+  color: #233142;
+}
+
+.delete-item:hover{
+  color: red;
+}
+
 #footer-section{
   background-color: #233142;
   padding: 3% 7%;
@@ -221,7 +233,7 @@ p{
 
 #navbar-section{
   background-color: #233142;
-  margin-bottom: 2%;
+  margin-bottom: 0;
 }
 
 #dropdown{

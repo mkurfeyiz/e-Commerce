@@ -45,29 +45,37 @@
               <a href="main.html" class="nav-link">Ana Sayfa</a>
             </li>
             <li class="nav-item">
-              <a href="main.html" class="nav-link">Mağaza</a>
+              <a id="shop-link" type="button" href="Javascript:void(0);" class="nav-link">Mağaza</a>
             </li>
             <li class="nav-item">
-              <a href="main.html" class="nav-link">İletişim</a>
+              <a id="contact-link" href="Javascript:void(0);" class="nav-link">İletişim</a>
             </li>
-            <li class="nav-item right dropdown">
+            <li class="nav-item">
+              <a id="signup-link" href="signup.html" class="nav-link">Kayıt Ol</a>
+            </li>
+            <li class="nav-item">
+              <div style="width: 28rem;">
+
+              </div>
+            </li>
+            <li class="nav-item dropdown">
               <div class="btn-group" role="group">
 
-                <button class="btn btn-lg btn-outline-light dropdown-toggle" data-bs-toggle="dropdown"><i class="nav-icon fas fa-user-alt"></i></button>
+                <button id="#profile" class="btn btn-lg btn-outline-light dropdown-toggle nav-link" data-bs-toggle="dropdown"><i class="nav-icon fas fa-user-alt"></i></button>
                 <!-- account dropdown -->
                 <ul class="dropdown-menu">
                   <li class="dropdown-item">
-                    <a href="#" id="dropdown">Hesap Bilgileri</a>
+                    <a id="profile-link" href="#" class="dropdown-item">Hesap Bilgileri</a>
                   </li>
                   <li class="dropdown-item">
-                    <a href="#" id="dropdown">Önceki Siparişlerim</a>
+                    <a href="#" class="dropdown-item">Önceki Siparişlerim</a>
                   </li>
                   <li class="dropdown-item">
-                    <a href="#" id="dropdown">Çıkış <i class="exit-icon fas fa-sign-out-alt"></i></a>
+                    <a href="#" class="dropdown-item">Çıkış <i class="exit-icon fas fa-sign-out-alt"></i></a>
                   </li>
                 </ul>
-                <button type="button" id="cart" class="btn btn-lg btn-outline-light"><i class="nav-icon fas fa-shopping-cart"></i>
-                  <span class="badge bg-secondary">0</span>
+                <button type="button" id="cart" class="btn btn-lg btn-outline-light nav-link"><i class="nav-icon fas fa-shopping-cart"></i>
+                  <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
                 </button>
               </div>
             </li>
@@ -81,181 +89,276 @@
 
   </section>
 
-  <!-- carousel section -->
-  <h3 class="subtitle">Öne Çıkan Ürünler</h3>
-  <section id="carousel-section">
-    <div id="featured-carousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/woman-dress.jpg" class="carousel-img" alt="model">
-          <div class="carousel-caption d-none d-md-block carousel-caption">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+  <div id="main-div" class="container-fluid" style="margin: 0; padding: 0;">
+    <!-- carousel section -->
+    <h3 class="subtitle">Öne Çıkan Ürünler</h3>
+    <section id="carousel-section">
+      <div id="featured-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/woman-dress.jpg" class="carousel-img" alt="model">
+            <div class="carousel-caption d-none d-md-block carousel-caption">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/man-tshirt.jpg" class="carousel-img" alt="model">
+            <div class="carousel-caption d-none d-md-block carousel-caption">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/watch.jpg" class="carousel-img" alt="model">
+            <div class="carousel-caption d-none d-md-block carousel-caption">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="images/man-tshirt.jpg" class="carousel-img" alt="model">
-          <div class="carousel-caption d-none d-md-block carousel-caption">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#featured-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featured-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- category section -->
+    <section id="category-section">
+      <h3 class="subtitle">Kategoriler</h3>
+      <div class="row">
+
+        <!-- category img col -->
+        <div class="col women col-md-4">
+          <!-- kadın -->
+          <a class="category-btn" href="#category-section" type="button">
+            <img class="category-img women" src="images/w-categ2.jpg" alt="women-model">
+          </a>
         </div>
-        <div class="carousel-item">
-          <img src="images/watch.jpg" class="carousel-img" alt="model">
-          <div class="carousel-caption d-none d-md-block carousel-caption">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+        <div class="col men col-md-4">
+          <!-- erkek -->
+          <a class="category-btn" href="#category-section" type="button">
+            <img class="category-img men" src="images/men-category.jpg" alt="men-model">
+          </a>
+        </div>
+        <div class="col accessory col-md-4">
+          <!-- aksesuar -->
+          <a class="category-btn" href="#category-section" type="button">
+            <img class="category-img accessory
+            " src="images/hat.jpg" alt="hat">
+          </a>
+        </div>
+
+        <!-- category col -->
+        <div class="col2 women col-md-4">
+          <!-- kadın -->
+          <h1 class="category-text women">Kadın Giyim</h1>
+        </div>
+        <div class="col2 men col-md-4">
+          <!-- erkek -->
+          <h1 class="category-text men">Erkek Giyim</h1>
+        </div>
+        <div class="col2 accessory col-md-4">
+          <!-- aksesuar -->
+          <h1 class="category-text accessory">Aksesuar</h1>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- featured section -->
+    <section id="featured-section">
+      <h1 class="featured-title">Çok Satan Ürünler</h1>
+
+      <div class="row">
+        <!-- first row -->
+        <div class="col-md-2 featured-col">
+          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tişört</h5>
+              <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
+              <!-- direct to modals -->
+              <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2 featured-col">
+          <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tişört</h5>
+              <h6 class="card-subtitle mb-2 text-muted">55.00 TL</h6>
+              <!-- direct to modals -->
+              <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2 featured-col">
+          <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tişört</h5>
+              <h6 class="card-subtitle mb-2 text-muted">40.00 TL</h6>
+              <!-- direct to modals -->
+              <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2 featured-col">
+          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Pantolon</h5>
+              <h6 class="card-subtitle mb-2 text-muted">120.00 TL</h6>
+              <!-- direct to modals -->
+              <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2 featured-col">
+          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Gömlek</h5>
+              <h6 class="card-subtitle mb-2 text-muted">75.00 TL</h6>
+              <!-- direct to modals -->
+              <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2 featured-col">
+          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Şort</h5>
+              <h6 class="card-subtitle mb-2 text-muted">35.00 TL</h6>
+              <!-- direct to modals -->
+              <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2 featured-col">
+          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tişört</h5>
+              <h6 class="card-subtitle mb-2 text-muted">48.90 TL</h6>
+              <!-- direct to modals -->
+              <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- modals -->
+    <!-- inspect modal -->
+    <div id="inspect-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal Title</h5>
+            <button type="button" class="btn-close inspect-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="inspect-img" src="" alt="item.jpg">
+            <h6 class="inspect-text modal-price">Fiyat : </h6>
+            <h6 class="inspect-text modal-count">Adet :
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary decrease">-</button>
+                <input type="text" style="width: 3rem; text-align: center" value="1"></input>
+                <button type="button" class="btn btn-secondary increase">+</button>
+              </div>
+            </h6>
+            <h6 class="inspect-text description">Ürün Açıklaması : <h6 class="inspect-text modal-caption"></h6>
+            </h6>
+          </div>
+          <div class="modal-footer">
+            <!--
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" id="add-to-cart" class="btn btn-success">Sepete Ekle <i class="fas fa-plus-circle"></i>
+            </button>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#featured-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#featured-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </section>
 
-  <!-- category section -->
-  <section id="category-section">
-    <h3 class="subtitle">Kategoriler</h3>
-    <div class="row">
-
-      <!-- category img col -->
-      <div class="col women col-md-4">
-        <!-- kadın -->
-        <a class="category-btn" href="#category-section" type="button">
-          <img class="category-img women" src="images/w-categ2.jpg" alt="women-model">
-        </a>
+    <!-- inspect modal toasts -->
+    <!-- success -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="inspect-toast-success" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          <h6 style="text-align: left;"> Ürün sepetinize eklendi. <i class="fas fa-check-circle" style="color: green;"></i></h6>
+        </div>
       </div>
-      <div class="col men col-md-4">
-        <!-- erkek -->
-        <a class="category-btn" href="#category-section" type="button">
-          <img class="category-img men" src="images/men-category.jpg" alt="men-model">
-        </a>
-      </div>
-      <div class="col accessory col-md-4">
-        <!-- aksesuar -->
-        <a class="category-btn" href="#category-section" type="button">
-          <img class="category-img accessory
-          " src="images/hat.jpg" alt="hat">
-        </a>
-      </div>
-
-      <!-- category col -->
-      <div class="col2 women col-md-4">
-        <!-- kadın -->
-        <h1 class="category-text women">Kadın Giyim</h1>
-      </div>
-      <div class="col2 men col-md-4">
-        <!-- erkek -->
-        <h1 class="category-text men">Erkek Giyim</h1>
-      </div>
-      <div class="col2 accessory col-md-4">
-        <!-- aksesuar -->
-        <h1 class="category-text accessory">Aksesuar</h1>
-      </div>
-
     </div>
-  </section>
-
-  <!-- featured section -->
-  <section id="featured-section">
-    <h1 class="featured-title">Çok Satan Ürünler</h1>
-
-    <div class="row">
-      <!-- first row -->
-      <div class="col-md-2 featured-col">
-        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tişört</h5>
-            <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
-          </div>
+    <!-- fail -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="inspect-toast-fail" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-
-      </div>
-      <div class="col-md-2 featured-col">
-        <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tişört</h5>
-            <h6 class="card-subtitle mb-2 text-muted">55.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
-          </div>
+        <div class="toast-body">
+          <h6 style="text-align: left;"> Ürünün sepete eklenmesi başarısız oldu. <i class="fas fa-times-circle" style="color: red;"></i></h6>
         </div>
-
       </div>
-      <div class="col-md-2 featured-col">
-        <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tişört</h5>
-            <h6 class="card-subtitle mb-2 text-muted">40.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-2 featured-col">
-        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Pantolon</h5>
-            <h6 class="card-subtitle mb-2 text-muted">120.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-2 featured-col">
-        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Gömlek</h5>
-            <h6 class="card-subtitle mb-2 text-muted">75.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-2 featured-col">
-        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Şort</h5>
-            <h6 class="card-subtitle mb-2 text-muted">35.00 TL</h6>
-            <!-- direct to modals -->
-            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-2 featured-col">
-        <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Tişört</h5>
-            <h6 class="card-subtitle mb-2 text-muted">48.90 TL</h6>
-            <!-- direct to modals -->
-            <a href="#featured-section" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </section>
 
+    <!-- cart modal -->
+    <div id="cart-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sepetim</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table id="cart-table" class="table table-danger">
+              <caption class="cart-sum">Toplam : </caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Ürün</th>
+                  <th scope="col">Adet</th>
+                  <th scope="col">Fiyat</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+              </tbody>
+
+            </table>
+
+          </div>
+          <div class="modal-footer">
+            <button id="delete-all-items" type="button" class="btn btn-danger">Sepeti Sıfırla</button>
+            <button id="end-shopping" type="button" class="btn btn-success">Alışverişi Tamamla</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- footer section -->
   <section id="footer-section">
     <a href="https://www.facebook.com"><i class="footer-icon fab fa-facebook-f"></i></a>
@@ -263,83 +366,6 @@
     <a href="https://www.instagram.com"><i class="footer-icon fab fa-instagram"></i></a>
     <p class="footer-p">© Copyright 2021 e-Commerce</p>
   </section>
-
-  <!-- modals -->
-  <!-- inspect modal -->
-  <div id="inspect-modal" class="modal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal Title</h5>
-          <button type="button" class="btn-close inspect-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="inspect-img" src="" alt="item.jpg">
-          <h6 class="inspect-text modal-price">Fiyat : </h6>
-          <h6 class="inspect-text modal-count">Adet :
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary decrease">-</button>
-              <input type="text" style="width: 3rem; text-align: center" value="1"></input>
-              <button type="button" class="btn btn-secondary increase">+</button>
-            </div>
-          </h6>
-          <h6 class="inspect-text description">Ürün Açıklaması : <h6 class="inspect-text modal-caption"></h6>
-          </h6>
-        </div>
-        <div class="modal-footer">
-          <!--
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-          <button type="button" class="btn btn-success">Sepete Ekle <i class="fas fa-plus-circle"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- cart modal -->
-  <div id="cart-modal" class="modal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Sepetim</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <table class="table table-danger">
-            <caption class="cart-sum">Toplam : </caption>
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Ürün</th>
-                <th scope="col">Adet</th>
-                <th scope="col">Fiyat</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr class="table table-light">
-                <td class="cart-item"><img class="cart-item-img" src="images/summer-sale.jpg" alt=""> </td>
-                <td class="cart-item cart-item-name">ÜrünAd</td>
-                <td class="cart-item cart-item-count">adet</td>
-                <td class="cart-item cart-item-price">fiyat</td>
-              </tr>
-              <tr class="table table-light">
-                <td class="cart-item"><img class="cart-item-img" src="images/watch.jpg" alt=""> </td>
-                <td class="cart-item cart-item-name">ÜrünAd</td>
-                <td class="cart-item cart-item-count">adet</td>
-                <td class="cart-item cart-item-price">fiyat</td>
-              </tr>
-            </tbody>
-
-          </table>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success">Alışverişi Tamamla</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/main.js" charset="utf-8"></script>

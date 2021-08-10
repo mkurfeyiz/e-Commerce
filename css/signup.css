@@ -1,0 +1,50 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #F7F3E9;
+}
+
+h5{
+  color: #696969;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+h4{
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FF5959;
+  padding: 3% 7% ;
+  text-align: center;
+}
+
+p{
+  color: #233142;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.form-label{
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #233142;
+  text-align: right;
+}
+
+#signup-div{
+  margin-top: 0;
+  padding: 5% 15%;
+  text-align: left;
+}
+
+.signup-btn{
+  position: relative;
+  text-align: center;
+  margin-left: 43%;
+  margin-bottom: 2.5%;
+}
