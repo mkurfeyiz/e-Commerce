@@ -13,14 +13,19 @@ h5{
 h4{
   font-size: 1.1rem;
   text-align: center;
+  padding-top: 1%;
 }
 
 h3{
   font-size: 2rem;
   font-weight: 700;
-  color: #FF5959;
-  padding: 3% 7% ;
+  color: #233142;
+  padding: 4% 7%;
+  margin-bottom: 3%;
   text-align: center;
+  border-style: none none solid none;
+  border-color: #233142;
+
 }
 
 p{
@@ -29,22 +34,46 @@ p{
   font-weight: 300;
 }
 
-.form-label{
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #233142;
-  text-align: right;
-}
-
-#signup-div{
-  margin-top: 0;
-  padding: 5% 15%;
+form{
   text-align: left;
 }
 
-.signup-btn{
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.card{
+  -webkit-box-shadow: 1px 1px 10px #233142;
+        box-shadow: 1px 1px 10px #233142;
+}
+
+.form-label{
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #6F8FAF;
+  text-align: right;
+}
+
+.signup-btn, .login-btn{
   position: relative;
   text-align: center;
-  margin-left: 43%;
-  margin-bottom: 2.5%;
+  width: 100%;
+  margin-bottom: 3%;
+  margin-top: 2.5%;
+  padding: 2.5%;
+  background-color: #6F8FAF;
+  border-color: #6F8FAF;
+}
+
+.signup-btn:hover{
+  background-color: #5D3FD3;
+  border-color: #5D3FD3;
+}
+
+#signup-div{
+  padding: 5% 10% 5% 22%;
 }

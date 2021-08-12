@@ -4,68 +4,44 @@
   $(this).css("background-color", "");
 }); hover code*/
 
+//inspect modal
+var itemImg, itemTitle, itemPrice, itemCaption, itemCount;
+var card, modalContent, modalBody, btnGroup;
+var itemsOnCart = [];
+
 //Swicthing operations
 //Shop section
 $("#shop-link").click(function(e) {
   e.preventDefault();
-  $.get("shop.html", function(data, status){
+  $.get("shop.html", function(data, status) {
     $("#main-div").html(data);
   })
 });
 
-/*$(document).ready(function() {
-  $("#shop-link").click(function(e) {
-    e.preventDefault();
-    $("#main-div").load("shop.html", function(responseTxt, statusTxt, jqXHR) {
-      if (statusTxt == "success") {
-
-      }
-      if (statusTxt == "error") {
-        alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
-      }
-    });
-  });
-});*/
 //Contact section
-/*$(document).ready(function() {
-  $("#contact-link").click(function(e) {
-    e.preventDefault();
-    $("#main-div").load("contact.html", function(responseTxt, statusTxt, jqXHR) {
-      if (statusTxt == "success") {
-
-      }
-      if (statusTxt == "error") {
-        alert("Error: " + jqXHR.status + " " + jqXHR.statusText);
-      }
-    });
-  });
-});*/
-
 $("#contact-link").click(function(e) {
   e.preventDefault();
-  $.get("contact.html", function(data, status){
+  $.get("contact.html", function(data, status) {
     $("#main-div").html(data);
   })
 });
 
-/*$("#contact-link").click(function(e) {
+//Orders section
+$("#orders-link").click(function(e) {
   e.preventDefault();
-  $.ajax({
-    type: "GET",
-    url: "contact.html",
-    data: {},
-    succes: function(data) {
-      $("#main-div").html(data);
-    }
-  });
-});*/
-
+  $.get("orders.html", function(data, status) {
+    $("#main-div").html(data);
+  })
+});
 
 //Modal codes
 //cart modal
 var tableBody = $("#cart-table").children("tbody");
 var totalPrice;
-$("#cart").click(function() {
+$("#cart").click(showCartItems);
+
+//show cart items
+function showCartItems() {
   tableBody.empty();
   totalPrice = 0;
   itemsOnCart.forEach((item, i) => {
@@ -85,16 +61,21 @@ $("#cart").click(function() {
   });
 
   $("#cart-modal").modal("show");
-});
+}
 
 //remove item from cart
-//var itemList = $("#cart-table").children("tbody").children("tr");
-//!!!!!!!!!!!!
-$(".delete-item").click(function() {
-  //var index = parseInt($(this).attr("rowIndex"));
-  var index = 1;
-  console.log(index + " aaaa");
-  itemsOnCart.splice(index - 1, 1);
+//following line helps to recreate dom elements by off and on (Important!!)
+$(document).off("click", ".delete-item").on("click", ".delete-item", function() {
+  var index = $(this).parent().parent().index();
+  //console.log(isNaN($(this).parent().parent().index()));
+  itemsOnCart.splice(index, 1);
+  //console.log(itemsOnCart.length);
+  if(itemsOnCart.length == 0){
+    totalPrice = 0;
+    $("#cart-table").children("caption").html("Toplam : " + totalPrice + " TL");
+  }
+  showCartItems();
+
 });
 
 //remove all items from cart
@@ -111,11 +92,6 @@ $("#end-shopping").click(function() {
   //direct to paying page
   $("#cart-modal").modal("hide");
 });
-
-//inspect modal
-var itemImg, itemTitle, itemPrice, itemCaption, itemCount;
-var card, modalContent, modalBody, btnGroup;
-var itemsOnCart = [];
 
 $(".inspect-btn").click(function() {
   //featured-col div
@@ -201,7 +177,8 @@ $("#add-to-cart").click(function() {
 });
 
 //update the number of items you have in cart automatically
-$(document).ready(function() {
+$(document).hover(function() {
+  localStorage.setItem("itemsOnCart", itemsOnCart);
   $("#cart-count").html(itemsOnCart.length);
 });
 
