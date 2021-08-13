@@ -9,30 +9,31 @@ var itemImg, itemTitle, itemPrice, itemCaption, itemCount;
 var card, modalContent, modalBody, btnGroup;
 var itemsOnCart = [];
 
+
 //Swicthing operations
 //Shop section
-$("#shop-link").click(function(e) {
+/*$("#shop-link").click(function(e) {
   e.preventDefault();
   $.get("shop.html", function(data, status) {
     $("#main-div").html(data);
   })
-});
+});*/
 
 //Contact section
-$("#contact-link").click(function(e) {
+/*$("#contact-link").click(function(e) {
   e.preventDefault();
   $.get("contact.html", function(data, status) {
     $("#main-div").html(data);
   })
-});
+});*/
 
 //Orders section
-$("#orders-link").click(function(e) {
+/*$("#orders-link").click(function(e) {
   e.preventDefault();
   $.get("orders.html", function(data, status) {
     $("#main-div").html(data);
   })
-});
+});*/
 
 //Modal codes
 //cart modal
@@ -44,7 +45,8 @@ $("#cart").click(showCartItems);
 function showCartItems() {
   tableBody.empty();
   totalPrice = 0;
-  itemsOnCart.forEach((item, i) => {
+  var items = JSON.parse(localStorage.getItem("itemsOnCart"));
+  items.forEach((item, i) => {
     //console.log(isNaN(item.count));
     //console.log(isNaN(parseInt(item.price)));
     totalPrice += item.count * item.price;
@@ -68,12 +70,14 @@ function showCartItems() {
 $(document).off("click", ".delete-item").on("click", ".delete-item", function() {
   var index = $(this).parent().parent().index();
   //console.log(isNaN($(this).parent().parent().index()));
-  itemsOnCart.splice(index, 1);
+  var items = JSON.parse(localStorage.getItem("itemsOnCart"));
+  items.splice(index, 1);
   //console.log(itemsOnCart.length);
-  if(itemsOnCart.length == 0){
+  if(items.length == 0){
     totalPrice = 0;
     $("#cart-table").children("caption").html("Toplam : " + totalPrice + " TL");
   }
+  localStorage.setItem("itemsOnCart", JSON.stringify(items));
   showCartItems();
 
 });
@@ -84,7 +88,8 @@ $("#delete-all-items").click(function() {
   totalPrice = 0;
   $("#cart-table").children("caption").html("Toplam : " + totalPrice + " TL");
   itemsOnCart = [];
-  $("#cart-count").html(itemsOnCart.length);
+  localStorage.setItem("itemsOnCart", JSON.stringify(itemsOnCart));
+  $("#cart-count").html(JSON.parse(localStorage.getItem("itemsOnCart")).length);
 });
 
 //end shopping
@@ -124,6 +129,11 @@ function print() {
   console.log($("#cart-table").children("tbody").children("tr"));
   console.log($(".delete-item"));
   console.log($("#end-shopping"));
+  var items = JSON.parse(localStorage.getItem("itemsOnCart"));
+  for(var i=0; i<items.length;i++){
+
+    console.log(items[i].image + " "+items.length);
+  }
 }
 //card = $(".inspect-btn").parent().parent().parent();
 //Modal Content
@@ -161,14 +171,15 @@ btnGroup.children(".increase").click(function() {
 //adding an item to cart
 $("#add-to-cart").click(function() {
   var item = {
-    name: itemTitle,
-    count: itemCount,
-    price: itemPrice,
-    image: itemImg
+    'name': itemTitle,
+    'count': itemCount,
+    'price': itemPrice,
+    'image': itemImg
   };
   if (item.count > 0) {
     itemsOnCart.push(item);
-    $("#cart-count").html(itemsOnCart.length);
+    localStorage.setItem("itemsOnCart", JSON.stringify(itemsOnCart));
+    $("#cart-count").html(JSON.parse(localStorage.getItem("itemsOnCart")).length);
     $("#inspect-toast-success").fadeIn(400).delay(3000).fadeOut(400);
   } else {
     $("#inspect-toast-fail").fadeIn(400).delay(3000).fadeOut(400);
@@ -178,7 +189,8 @@ $("#add-to-cart").click(function() {
 
 //update the number of items you have in cart automatically
 $(document).hover(function() {
-  $("#cart-count").html(itemsOnCart.length);
+  //debugger;
+  $("#cart-count").html(JSON.parse(localStorage.getItem("itemsOnCart")).length);
 });
 
 //Category hover codes
