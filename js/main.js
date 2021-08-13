@@ -178,7 +178,6 @@ $("#add-to-cart").click(function() {
 
 //update the number of items you have in cart automatically
 $(document).hover(function() {
-  localStorage.setItem("itemsOnCart", itemsOnCart);
   $("#cart-count").html(itemsOnCart.length);
 });
 
