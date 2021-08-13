@@ -1,0 +1,79 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #F7F3E9;
+}
+
+h5{
+  color: #696969;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+h4{
+  font-size: 1.1rem;
+  text-align: center;
+  padding-top: 1%;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #233142;
+  padding: 4% 7%;
+  margin-bottom: 3%;
+  text-align: center;
+  border-style: none none solid none;
+  border-color: #233142;
+
+}
+
+p{
+  color: #233142;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+form{
+  text-align: left;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.card{
+  -webkit-box-shadow: 1px 1px 10px #233142;
+        box-shadow: 1px 1px 10px #233142;
+}
+
+.form-label{
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #6F8FAF;
+  text-align: right;
+}
+
+.signup-btn, .login-btn{
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3%;
+  margin-top: 2.5%;
+  padding: 2.5%;
+  background-color: #6F8FAF;
+  border-color: #6F8FAF;
+}
+
+.signup-btn:hover{
+  background-color: #5D3FD3;
+  border-color: #5D3FD3;
+}
+
+#signup-div{
+  padding: 5% 10% 5% 22%;
+}

@@ -1,0 +1,42 @@
+h3{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #233142;
+  padding: 4% 7%;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+h5{
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-top: 1.2%;
+  text-align: center;
+}
+
+.login-btn{
+  width: 100%;
+  padding: 2.5%;
+  background-color: #6F8FAF;
+  border-color: #6F8FAF;
+}
+
+.login-btn:hover{
+  background-color: #5D3FD3;
+  border-color: #5D3FD3;
+}
+
+.login-icons{
+  font-size: 2.1rem;
+  padding: 0 5%;
+  text-align: center;
+  color: #6F8FAF;
+}
+
+.login-icons:hover{
+  color: #5D3FD3;
+}
+
+#login-div{
+  padding: 5% 10% 5% 22%;
+}

@@ -1,0 +1,24 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h5{
+  color: #FF5959;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+p{
+  color: #233142;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.nav-item{
+  width: 100%;
+}
+
+#shop-div{
+  background-color: #F7F3E9;
+}
