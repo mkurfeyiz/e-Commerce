@@ -7,33 +7,8 @@
 //inspect modal
 var itemImg, itemTitle, itemPrice, itemCaption, itemCount;
 var card, modalContent, modalBody, btnGroup;
-var itemsOnCart = [];
+var itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
 
-
-//Swicthing operations
-//Shop section
-/*$("#shop-link").click(function(e) {
-  e.preventDefault();
-  $.get("shop.html", function(data, status) {
-    $("#main-div").html(data);
-  })
-});*/
-
-//Contact section
-/*$("#contact-link").click(function(e) {
-  e.preventDefault();
-  $.get("contact.html", function(data, status) {
-    $("#main-div").html(data);
-  })
-});*/
-
-//Orders section
-/*$("#orders-link").click(function(e) {
-  e.preventDefault();
-  $.get("orders.html", function(data, status) {
-    $("#main-div").html(data);
-  })
-});*/
 
 //Modal codes
 //cart modal
@@ -118,7 +93,7 @@ $(".inspect-btn").click(function() {
   modalContent.children(".modal-header").children("h5").text(itemTitle);
   //item img, price, caption
   modalBody.children("img").attr("src", itemImg);
-  modalBody.children(".modal-price").text("Fiyat : " + itemPrice);
+  modalBody.children(".modal-price").text("Fiyat : " + itemPrice + " TL");
   modalBody.children(".description").html("Ürün Açıklaması : " + '<h6 class="inspect-text modal-caption">' + itemCaption + '</h6>');
 
   $("#inspect-modal").modal("show");
