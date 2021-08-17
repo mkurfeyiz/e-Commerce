@@ -4,9 +4,13 @@ body{
 }
 
 h5{
-  color: #FF5959;
+  color: #233142;
   font-size: 1.7rem;
   font-weight: 600;
+}
+
+h6{
+  padding-top: 2%;
 }
 
 p{
@@ -15,8 +19,88 @@ p{
   font-weight: 300;
 }
 
+.list-unstyled > li{
+  padding-top: 1.5%;
+  font-size: 1.1rem;
+  color: #546e7a;
+}
+
 .nav-item{
   width: 100%;
+}
+
+.btn-header{
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+.btn-toggle-nav{
+  text-align: left;
+  padding-left: 9%;
+}
+
+.filter-row{
+  width: 100%;
+}
+
+.inspect-btn{
+  margin-top: 10%;
+  padding: 3% 7%;
+  background-color: #4F9DA6;
+  color: white;
+}
+
+.inspect-btn:hover{
+  background-color: #1565c0;
+  color: white;
+}
+
+.filter-btn{
+  color: white;
+  background-color: #4F9DA6;
+  border-color: #4F9DA6;
+  padding: 3% 7%;
+}
+
+.filter-btn:hover{
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
+
+.filter-btn:focus{
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
+
+.card-img-top{
+  transition: transform .3s;
+  width: auto;
+  height: 20rem;
+  border: none;
+}
+
+.card{
+  margin: 8% 0;
+}
+
+.dropdown-item{
+  color: #546e7a;
+}
+
+.dropdown-item:hover{
+  color: #233142;
+}
+
+#orderDropdown{
+  color: #546e7a;
+}
+
+#min-price, #max-price{
+  width: 3.8rem;
+  height: 1.6rem;
+  vertical-align: middle;
 }
 
 #shop-div{

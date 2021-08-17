@@ -101,11 +101,11 @@ p{
   padding-left: 2%;
 }
 
-.featured-img{
-  border: 1px;
-  border-style: solid;
-  border-color: #E6E6FA;
-  height: 50%;
+.card-img-top{
+  transition: transform .3s;
+  width: auto;
+  height: 13rem;
+  border: none;
 }
 
 .card-body{
