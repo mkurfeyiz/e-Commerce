@@ -35,15 +35,27 @@ $("#items .card").hover(function(){
     }
   });
 });*/
-
+//checkbox filters
+//category
+var filterCategory = [];
 $(":checkbox").click(function(){
+
+
   $(":checkbox:checked").each(function(){
     //$(".col-md-4").hide();
     var value = $(this).val().toLowerCase();
-    //console.log(value);
-    $("#items .col-md-4 ").filter(function() {
-      $(this).toggle( $(this).text().toLowerCase().indexOf(value) > -1);
-    });
+    filterCategory.push(value);
+  });
+
+
+  $("#items .col-md-4 .card-title").filter(function() {
+
+    var title = $(this).text().toLowerCase().trim();
+    var result = jQuery.inArray(title, filterCategory);
+
+    console.log("result: " + result + "; title=" + title);
+
+    $(this).parent().parent().parent().toggle( result > -1);
   });
 });
 
