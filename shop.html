@@ -65,13 +65,13 @@
                 <!-- account dropdown -->
                 <ul class="dropdown-menu">
                   <li class="dropdown-item">
-                    <a id="profile-link" href="#" class="dropdown-item">Hesap Bilgileri</a>
+                    <a id="profile-link" href="profile.html" class="dropdown-item">Hesap Bilgileri</a>
                   </li>
                   <li class="dropdown-item">
-                    <a id="orders-link" href="Javascript:void(0);" class="dropdown-item">Siparişlerim</a>
+                    <a id="orders-link" href="orders.html" class="dropdown-item">Siparişlerim</a>
                   </li>
                   <li class="dropdown-item">
-                    <a id="quit-link" href="#" class="dropdown-item">Çıkış <i class="exit-icon fas fa-sign-out-alt"></i></a>
+                    <a id="quit-link" href="Javascript:void(0);" class="dropdown-item">Çıkış <i class="exit-icon fas fa-sign-out-alt"></i></a>
                   </li>
                 </ul>
                 <button type="button" id="cart" class="btn btn-lg btn-outline-light nav-link"><i class="nav-icon fas fa-shopping-cart"></i>
@@ -94,7 +94,7 @@
     <div class="row">
       <div class="col-md-3">
 
-        <!-- snippet from bootstrap -->
+        <!-- side menu -->
         <div class="flex-shrink-0 p-3 bg-white" style="/*width: 280px;*/">
 
           <!-- list starts here -->
@@ -107,14 +107,14 @@
               <div class="collapse show" id="gender-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="woman-radio">
-                    <label class="form-check-label" for="woman-radio">
+                    <input class="form-check-input" type="checkbox" value="" id="woman-check">
+                    <label class="form-check-label" for="shirt-check">
                       Kadın
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="man-radio">
-                    <label class="form-check-label" for="man-radio">
+                    <input class="form-check-input" type="checkbox" value="" id="man-check">
+                    <label class="form-check-label" for="shirt-check">
                       Erkek
                     </label>
                   </li>
@@ -129,49 +129,49 @@
               <div class="collapse" id="category-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="shirt-check">
+                    <input class="form-check-input" type="checkbox" value="Gömlek" id="shirt-check">
                     <label class="form-check-label" for="shirt-check">
                       Gömlek
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="tshirt-check">
+                    <input class="form-check-input" type="checkbox" value="Tişört" id="tshirt-check">
                     <label class="form-check-label" for="tshirt-check">
                       Tişört
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="pants-check">
+                    <input class="form-check-input" type="checkbox" value="Pantolon" id="pants-check">
                     <label class="form-check-label" for="pants-check">
                       Pantolon
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="sweatsuit-check">
+                    <input class="form-check-input" type="checkbox" value="Eşofman" id="sweatsuit-check">
                     <label class="form-check-label" for="sweatsuit-check">
                       Eşofman
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="short-check">
+                    <input class="form-check-input" type="checkbox" value="Şort" id="short-check">
                     <label class="form-check-label" for="short-check">
                       Şort
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="underwear-check">
+                    <input class="form-check-input" type="checkbox" value="İç Giyim" id="underwear-check">
                     <label class="form-check-label" for="underwear-check">
                       İç Giyim
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="outerwear-check">
+                    <input class="form-check-input" type="checkbox" value="Dış Giyim" id="outerwear-check">
                     <label class="form-check-label" for="underwear-check">
                       Dış Giyim
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="accessory-check">
+                    <input class="form-check-input" type="checkbox" value="Aksesuar" id="accessory-check">
                     <label class="form-check-label" for="accessory-check">
                       Aksesuar
                     </label>
@@ -223,11 +223,12 @@
                     </label>
                   </li>
                   <li>
-                    Diğer :
-                    <input class="form-check-input" type="number" value="0" id="min-price" placeholder="min">
-                    -
-                    <input class="form-check-input" type="number" value="0" id="max-price" placeholder="max">
-                    <label class="form-check-label" for="pants-check">
+                    <input class="form-check-input" type="checkbox" value="" id="other-check">
+                    <label class="form-check-label" for="other-check">
+                      Diğer :
+                      <input class="form-check-input" type="number" value="0" id="min-price" placeholder="min">
+                      -
+                      <input class="form-check-input" type="number" value="0" id="max-price" placeholder="max">
 
                     </label>
                   </li>
@@ -310,10 +311,17 @@
                           Sıralama Ölçütü
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="orderDropdown">
-                          <li><a class="dropdown-item" href="Javascript:void(0);">Azalan Fiyat <i class="far fa-arrow-alt-circle-down"></i></a></li>
-                          <li><a class="dropdown-item" href="Javascript:void(0);">Artan Fiyat <i class="far fa-arrow-alt-circle-up"></i></a></li>
+                          <li><a class="alphabetic-order dropdown-item" href="Javascript:void(0);">Alfabetik Sıralama(A-Z) <i class="fas fa-sort-alpha-down"></i></a></li>
+                          <li><a class="price-desc dropdown-item" href="Javascript:void(0);">Azalan Fiyat <i class="far fa-arrow-alt-circle-down"></i></a></li>
+                          <li><a class="price-asc dropdown-item" href="Javascript:void(0);">Artan Fiyat <i class="far fa-arrow-alt-circle-up"></i></a></li>
 
                         </ul>
+                      </li>
+                      <li style="width: 37rem;">
+
+                      </li>
+                      <li class="nav-item">
+                        <input id="search-bar" class="form-control me-2" type="text" placeholder="Ara">
                       </li>
 
                     </ul>
@@ -325,14 +333,14 @@
         </div>
 
         <!-- products -->
-        <div class="row shop-row">
+        <div id="items" class="row shop-row">
 
           <div class="col-md-4">
-            <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
             <div class="card">
+              <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
-                <h5 class="card-title">Tişört</h5>
-                <h6 class="card-subtitle mb-2 text-muted">45.00 TL</h6>
+                <h5 class="card-title">Tişört </h5>
+                <h6 class="card-subtitle mb-2 text-muted">45.00 TL </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -340,11 +348,11 @@
           </div>
 
           <div class="col-md-4">
-            <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
             <div class="card">
+              <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
-                <h5 class="card-title">Tişört</h5>
-                <h6 class="card-subtitle mb-2 text-muted">55.00 TL</h6>
+                <h5 class="card-title">Eşofman </h5>
+                <h6 class="card-subtitle mb-2 text-muted">45.00 TL </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -352,11 +360,11 @@
           </div>
 
           <div class="col-md-4">
-            <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
             <div class="card">
+              <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
-                <h5 class="card-title">Pantolon</h5>
-                <h6 class="card-subtitle mb-2 text-muted">150.00 TL</h6>
+                <h5 class="card-title">Atkı </h5>
+                <h6 class="card-subtitle mb-2 text-muted">55.00 TL </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -364,153 +372,198 @@
           </div>
 
           <div class="col-md-4">
-            <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
             <div class="card">
+              <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
-                <h5 class="card-title">Gömlek</h5>
-                <h6 class="card-subtitle mb-2 text-muted">105.50 TL</h6>
+                <h5 class="card-title">Pantolon </h5>
+                <h6 class="card-subtitle mb-2 text-muted">150.00 TL </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
-          </div>
-
-        </div>
-
-        <div class="col-md-4">
-          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Gömlek</h5>
-              <h6 class="card-subtitle mb-2 text-muted">75.00 TL</h6>
-              <!-- direct to modals -->
-              <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pantolon</h5>
-              <h6 class="card-subtitle mb-2 text-muted">100.00 TL</h6>
-              <!-- direct to modals -->
-              <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
+              <div class="card-body">
+                <h5 class="card-title">Gömlek </h5>
+                <h6 class="card-subtitle mb-2 text-muted">105.50 TL </h6>
+                <!-- direct to modals -->
+                <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
+              <div class="card-body">
+                <h5 class="card-title">Gömlek </h5>
+                <h6 class="card-subtitle mb-2 text-muted">105.51 TL </h6>
+                <!-- direct to modals -->
+                <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+              <div class="card-body">
+                <h5 class="card-title">Gömlek </h5>
+                <h6 class="card-subtitle mb-2 text-muted"> 75.00 TL </h6>
+                <!-- direct to modals -->
+                <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-4">
-          <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tişört</h5>
-              <h6 class="card-subtitle mb-2 text-muted">68.90 TL</h6>
-              <!-- direct to modals -->
-              <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+              <div class="card-body">
+                <h5 class="card-title">Pantolon </h5>
+                <h6 class="card-subtitle mb-2 text-muted">100.00 TL </h6>
+                <!-- direct to modals -->
+                <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+              <div class="card-body">
+                <h5 class="card-title">Ceket </h5>
+                <h6 class="card-subtitle mb-2 text-muted">68.90 TL </h6>
+                <!-- direct to modals -->
+                <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
+              <div class="card-body">
+                <h5 class="card-title">Ceket </h5>
+                <h6 class="card-subtitle mb-2 text-muted">60.90 TL </h6>
+                <!-- direct to modals -->
+                <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+      <!-- cart modal -->
+      <div id="cart-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sepetim</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table id="cart-table" class="table table-danger">
+                <caption class="cart-sum">Toplam : </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ürün</th>
+                    <th scope="col">Adet</th>
+                    <th scope="col">Fiyat(TL)</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+              </table>
+
+            </div>
+            <div class="modal-footer">
+              <button id="delete-all-items" type="button" class="btn btn-danger">Sepeti Sıfırla</button>
+              <button id="end-shopping" type="button" class="btn btn-success">Alışverişi Tamamla</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- cart modal -->
-    <div id="cart-modal" class="modal" tabindex="-1">
+    <!-- inspect modal -->
+    <div id="inspect-modal" class="modal" tabindex="-1">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Sepetim</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title">Modal Title</h5>
+            <button type="button" class="btn-close inspect-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <table id="cart-table" class="table table-danger">
-              <caption class="cart-sum">Toplam : </caption>
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Ürün</th>
-                  <th scope="col">Adet</th>
-                  <th scope="col">Fiyat(TL)</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-
-              <tbody>
-
-              </tbody>
-
-            </table>
-
+            <img class="inspect-img" src="" alt="item.jpg">
+            <h6 class="inspect-text modal-price">Fiyat : </h6>
+            <h6 class="inspect-text modal-count">Adet :
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary decrease">-</button>
+                <input type="text" style="width: 3rem; text-align: center" value="1"></input>
+                <button type="button" class="btn btn-secondary increase">+</button>
+              </div>
+            </h6>
+            <h6 class="inspect-text description">Ürün Açıklaması : <h6 class="inspect-text modal-caption"></h6>
+            </h6>
           </div>
           <div class="modal-footer">
-            <button id="delete-all-items" type="button" class="btn btn-danger">Sepeti Sıfırla</button>
-            <button id="end-shopping" type="button" class="btn btn-success">Alışverişi Tamamla</button>
+            <!--
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" id="add-to-cart" class="btn btn-success">Sepete Ekle <i class="fas fa-plus-circle"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-  </div>
-
-  <!-- inspect modal -->
-  <div id="inspect-modal" class="modal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal Title</h5>
-          <button type="button" class="btn-close inspect-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- inspect modal toasts -->
+    <!-- success -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="inspect-toast-success" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <img class="inspect-img" src="" alt="item.jpg">
-          <h6 class="inspect-text modal-price">Fiyat : </h6>
-          <h6 class="inspect-text modal-count">Adet :
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary decrease">-</button>
-              <input type="text" style="width: 3rem; text-align: center" value="1"></input>
-              <button type="button" class="btn btn-secondary increase">+</button>
-            </div>
-          </h6>
-          <h6 class="inspect-text description">Ürün Açıklaması : <h6 class="inspect-text modal-caption"></h6>
-          </h6>
-        </div>
-        <div class="modal-footer">
-          <!--
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-          <button type="button" id="add-to-cart" class="btn btn-success">Sepete Ekle <i class="fas fa-plus-circle"></i>
-          </button>
+        <div class="toast-body">
+          <h6 style="text-align: left;"> Ürün sepetinize eklendi. <i class="fas fa-check-circle" style="color: green;"></i></h6>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- inspect modal toasts -->
-  <!-- success -->
-  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-    <div id="inspect-toast-success" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        <h6 style="text-align: left;"> Ürün sepetinize eklendi. <i class="fas fa-check-circle" style="color: green;"></i></h6>
+    <!-- fail -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="inspect-toast-fail" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          <h6 style="text-align: left;"> Ürünün sepete eklenmesi başarısız oldu. <i class="fas fa-times-circle" style="color: red;"></i></h6>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- fail -->
-  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-    <div id="inspect-toast-fail" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        <h6 style="text-align: left;"> Ürünün sepete eklenmesi başarısız oldu. <i class="fas fa-times-circle" style="color: red;"></i></h6>
-      </div>
-    </div>
+
   </div>
 
-</div>
+  <!-- footer section -->
+  <section id="footer-section" style="margin-top: 5%;">
+    <a href="https://www.facebook.com"><i class="footer-icon fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com"><i class="footer-icon fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com"><i class="footer-icon fab fa-instagram"></i></a>
+    <p class="footer-p">© Copyright 2021 e-Commerce</p>
+  </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/shop.js" charset="utf-8"></script>

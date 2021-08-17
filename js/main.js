@@ -84,7 +84,7 @@ $(".inspect-btn").click(function() {
   btnGroup = modalBody.children(".modal-count").children(".btn-group");
   btnGroup.children("input").val(1);
   //console.log(card);
-  itemImg = card.children("img").attr("src");
+  itemImg = card.children(".card").children("img").attr("src");
   itemTitle = card.children("div").children("div").children("h5").text();
   itemPrice = parseFloat(card.children("div").children("div").children("h6").text());
   itemCaption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar at magna sit amet pretium. Donec orci tellus,iaculis sit amet blandit vulputate, laoreet in arcu. Morbi lobortis nibh nulla vitae accumsan massa faucibus nec";

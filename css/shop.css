@@ -19,7 +19,7 @@ p{
   font-weight: 300;
 }
 
-li{
+.list-unstyled > li{
   padding-top: 1.5%;
   font-size: 1.1rem;
   color: #546e7a;
@@ -41,10 +41,6 @@ li{
   padding-left: 9%;
 }
 
-.shop-row{
-  margin-top: 3%;
-}
-
 .filter-row{
   width: 100%;
 }
@@ -52,29 +48,49 @@ li{
 .inspect-btn{
   margin-top: 10%;
   padding: 3% 7%;
-  background-color: #f44336;
+  background-color: #4F9DA6;
   color: white;
 }
 
 .inspect-btn:hover{
-  background-color: #c62828;
+  background-color: #1565c0;
   color: white;
 }
 
 .filter-btn{
-  background-color: #546e7a;
-  border-color: #546e7a;
+  color: white;
+  background-color: #4F9DA6;
+  border-color: #4F9DA6;
   padding: 3% 7%;
 }
 
 .filter-btn:hover{
-  background-color: #455a64;
-  border-color: #455a64;
+  background-color: #1565c0;
+  border-color: #1565c0;
 }
 
 .filter-btn:focus{
-  background-color: #455a64;
-  border-color: #455a64;
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
+
+.card-img-top{
+  transition: transform .3s;
+  width: auto;
+  height: 20rem;
+  border: none;
+}
+
+.card{
+  margin: 8% 0;
+}
+
+.dropdown-item{
+  color: #546e7a;
+}
+
+.dropdown-item:hover{
+  color: #233142;
 }
 
 #orderDropdown{
@@ -83,7 +99,7 @@ li{
 
 #min-price, #max-price{
   width: 3.8rem;
-  height: 1.8rem;
+  height: 1.6rem;
   vertical-align: middle;
 }
 
