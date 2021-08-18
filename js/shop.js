@@ -2,85 +2,93 @@ var items = $(".shop-row .col-md-4");
 var shopItems = [];
 var shopRow = $(".shop-row");
 
-//console.log($("#items .col-md-4 .card .card-body *").text());
+console.log($(".category:not(:checked)"));
 
 //hover animation
-$("#items .card").hover(function(){
+$("#items .card").hover(function() {
   //console.log($(this).siblings("img"));
   //shadowing
-  $(this).css("box-shadow","4px 4px 2px #cfd8dc");
+  $(this).css("box-shadow", "4px 4px 2px #cfd8dc");
   //zoom-in
-  $(this).children("img").css("transform","scale(1.02)");
+  $(this).children("img").css("transform", "scale(1.02)");
 
-}, function(){
+}, function() {
   //unshadowing
-  $(this).css("box-shadow","");
+  $(this).css("box-shadow", "");
 
   //zoom-out
-  $(this).children("img").css("transform","scale(1)");
+  $(this).children("img").css("transform", "scale(1)");
 });
 
 //checkbox filters
-/*$(document).ready(function(){
-  var value = [];
-  $(":checkbox").change(function(){
-    if(this.checked){
-      value.push($(this).val().toLowerCase());
-      console.log(value);
-      $("#items .col-md-4 ").filter(function() {
-        for(var i=0; i<value.length; i++){
-          $(this).toggle( $(this).text().toLowerCase().indexOf(value[i]) > -1);
-        }
-      });
+//category filter
+var filterCategory = [];
+var categoryValue;
+$(".category:not(:checked)").click(function() {
+  $(".category:checked").each(function() {
+    categoryValue = $(this).val().toLowerCase().trim();
+    if(jQuery.inArray(categoryValue, filterCategory) < 0){
+      filterCategory.push(categoryValue);
     }
   });
-});*/
-//checkbox filters
-//category
-var filterCategory = [];
-$(":checkbox").click(function(){
 
+  $("#items .col-md-4 .card-title").filter(function() {
+    var title = $(this).text().toLowerCase().trim();
+    var result = jQuery.inArray(title, filterCategory);
 
-  $(":checkbox:checked").each(function(){
-    //$(".col-md-4").hide();
-    var value = $(this).val().toLowerCase();
-    filterCategory.push(value);
+    $(this).parent().parent().parent().toggle(result > -1);
   });
+});
 
+$(".category").change(function() {
+  $(".category:not(:checked)").each(function() {
+    categoryValue = $(this).val().toLowerCase();
+    while(jQuery.inArray(categoryValue, filterCategory) > -1){
+      filterCategory.splice(filterCategory.indexOf(categoryValue), 1);
+    }
+  });
 
   $("#items .col-md-4 .card-title").filter(function() {
 
     var title = $(this).text().toLowerCase().trim();
     var result = jQuery.inArray(title, filterCategory);
 
-    console.log("result: " + result + "; title=" + title);
+    if(filterCategory.length > 0){
+      $(this).parent().parent().parent().toggle(result > -1);
+    } else {
+      //all categories unchecked
+      $(this).parent().parent().parent().toggle(result == -1);
+    }
 
-    $(this).parent().parent().parent().toggle( result > -1);
   });
 });
+//price filter
+//price class : .card-subtitle or h6 tag
+//price checkboxes class name : .price
+
 
 //search filter
-$(document).ready(function(){
+$(document).ready(function() {
   console.log("ready");
   $("#search-bar").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     //console.log(value + " deneme");
     $("#items .col-md-4 ").filter(function() {
-      $(this).toggle( $(this).text().toLowerCase().indexOf(value) > -1);
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
   });
 });
 
 //alphabetic order
-$(".alphabetic-order").click( alphabeticSort );
+$(".alphabetic-order").click(alphabeticSort);
 
 //price desc
-$(".price-desc").click( priceDescSort );
+$(".price-desc").click(priceDescSort);
 
 //price asc
-$(".price-asc").click( priceAscSort );
+$(".price-asc").click(priceAscSort);
 
-function priceAscSort(){
+function priceAscSort() {
 
   var tempTag;
   for (var i = 0; i < items.length - 1; i++) {
