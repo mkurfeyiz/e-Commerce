@@ -1,0 +1,25 @@
+h5{
+  font-size: 3rem;
+  text-align: left;
+  padding: 0 7%;
+}
+
+hr{
+  margin-bottom: 3%;
+}
+
+.profile-photo{
+  border-style: 10px 10px 10px solid #233142;
+  border-radius: 50%;
+  width: 18rem;
+  height: auto;
+}
+
+.change{
+  display: table-column;
+  vertical-align: middle;
+}
+
+#profile-div{
+  margin: 4.5% 0;
+}
