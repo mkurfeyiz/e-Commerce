@@ -10,7 +10,18 @@ hr{
   margin: 3% 0;
 }
 
+.error-text{
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  display: none;
+  color: red;
+}
+
 .profile-photo{
+  -webkit-box-shadow: 1px 1px 10px #233142;
+        box-shadow: 1px 1px 10px #233142;
   border: 4px solid #90a4ae;
   border-radius: 50%;
   width: 18rem;
@@ -75,8 +86,8 @@ hr{
   font-weight: 500;
   width: 100%;
   padding: 1.3%;
-  background-color: #43a047;
-  border-color: #43a047;
+  background-color: #388e3c;
+  border-color: #388e3c;
 }
 
 .save-btn:hover{
@@ -89,6 +100,21 @@ hr{
   border-color: #1b5e20;
 }
 
+.upload-btn{
+  background-color: #4F9DA6;
+  border-color: #4F9DA6;
+}
+
+.upload-btn:hover{
+  background-color: #00838f;
+  border-color: #00838f;
+}
+
+.upload-btn:focus{
+  background-color: #00838f;
+  border-color: #00838f;
+}
+
 .name-row{
   text-align: left;
   font-size: 1.2rem;
@@ -97,11 +123,11 @@ hr{
 }
 
 .name-col{
-  padding: 3% 2%;
+  padding: 1% 2%;
 }
 
 .name-row > .col{
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
 .save-col{
