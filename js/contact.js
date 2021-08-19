@@ -1,27 +1,53 @@
-/*var tableBody = $("#cart-table").children("tbody");
-var totalPrice;
-$("#cart").click(showCartItems);
+$(".send-btn").click( contactControl );
 
-//show cart items
-function showCartItems() {
-  tableBody.empty();
-  totalPrice = 0;
-  var items = JSON.parse(localStorage.getItem("itemsOnCart"));
-  items.forEach((item, i) => {
-    //console.log(isNaN(item.count));
-    //console.log(isNaN(parseInt(item.price)));
-    totalPrice += item.count * item.price;
-    tableBody.append(
-      '<tr class="table table-light">' +
-      '<td class="cart-item"><img class="cart-item-img" src=' + item.image + ' alt=""> </td>' +
-      '<td class="cart-item cart-item-name">' + item.name + '</td>' +
-      '<td class="cart-item cart-item-count">' + item.count + '</td>' +
-      '<td class="cart-item cart-item-price">' + (item.price * item.count) + '</td>' +
-      '<td> <button type="button" class="btn delete-item"><i class="fas fa-times"></i></button></td>' +
-      '</tr>'
-    );
-    $("#cart-table").children("caption").html("Toplam : " + totalPrice + " TL");
-  });
+function contactControl(){
+  var firstName = $("#fname");
+  var lastName = $("#lname");
+  var phoneNumber = $("#phone");
+  var emailAddress = $("#emailInput1");
+  var checkFlag, count = 0;
+  //4 condition value
 
-  $("#cart-modal").modal("show");
-}*/
+  if(firstName.val()){
+    $("#fname-error").css("display","none");
+    checkFlag = true;
+    count++;
+  } else {
+    checkFlag = false;
+    $("#fname-error").css("display","block");
+  }
+
+  if(lastName.val()){
+    $("#lname-error").css("display","none");
+    checkFlag = true;
+    count++;
+  } else {
+    checkFlag = false;
+    $("#lname-error").css("display","block");
+  }
+
+  if(phoneNumber.val()){
+    $("#phone-error").css("display","none");
+    checkFlag = true;
+    count++;
+  } else {
+    checkFlag = false;
+    $("#phone-error").css("display","block");
+  }
+
+  if(emailAddress.val()){
+    $("#email-error").css("display","none");
+    checkFlag = true;
+    count++;
+  } else {
+    checkFlag = false;
+    $("#email-error").css("display","block");
+  }
+
+
+  if(count % 4 == 0 && checkFlag){
+    console.log("success");
+  } else {
+    console.log("fail");
+  }
+}
