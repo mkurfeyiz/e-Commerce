@@ -14,7 +14,7 @@ var itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
 //cart modal
 var tableBody = $("#cart-table").children("tbody");
 var totalPrice;
-$("#cart").click(showCartItems);
+$("#cart-btn").click(showCartItems);
 
 //show cart items
 function showCartItems() {

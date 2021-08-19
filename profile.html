@@ -122,38 +122,68 @@
           <div class="col col-md-6">
             <label for="fname" class="form-label">İsim</label>
             <input id="fname" class="form-control" type="text" name="fname" value="" placeholder="İsim">
+            <p id="fname-error" class="error-text">*İsim alanı boş bırakılamaz.</p>
           </div>
           <div class="col col-md-6">
             <label for="lname" class="form-label">Soyisim</label>
             <input id="lname" class="form-control" type="text" name="lname" value="" placeholder="Soyisim">
+            <p id="lname-error" class="error-text">*Soyisim alanı boş bırakılamaz.</p>
           </div>
 
           <div class="col col-md-12">
             <label for="phone" class="form-label">Telefon</label>
             <input id="phone" class="form-control" type="text" name="phone" value="" placeholder="Telefon">
+            <p id="phone-error" class="error-text">*Telefon alanı boş bırakılamaz.</p>
           </div>
 
           <div class="col col-md-12">
             <label for="email" class="form-label">E-mail</label>
             <input id="email" class="form-control" type="email" name="email" value="" placeholder="E-mail">
+            <p id="email-error" class="error-text">*E-mail alanı boş bırakılamaz.</p>
           </div>
 
           <div class="col col-md-6">
             <label for="password" class="form-label">Şifre</label>
             <input id="password" class="form-control" type="password" name="password" value="" placeholder="Şifre">
+            <p id="password-error" class="error-text">*Şifre alanı boş bırakılamaz.</p>
           </div>
           <div class="col col-md-6">
             <label for="password2" class="form-label">Şifre Tekrar</label>
             <input id="password2" class="form-control" type="password" name="password2" value="" placeholder="Şifre Tekrar">
+            <p id="password2-error" class="error-text">*Şifrenizi tekrar giriniz.</p>
+          </div>
+
+          <div class="col-md-12 error-div">
+            <br>
+            <p id="passwords-match-error" class="error-text">Şifreler eşleşmiyor.</p>
           </div>
 
         </div>
       </div>
 
       <div class="col-md-12 save-col">
-        <button class="btn btn-primary save-btn" type="button" name="button">Değişiklikleri Kaydet</button>
+        <button class="btn btn-success save-btn" type="button" name="button">Değişiklikleri Kaydet</button>
       </div>
 
+    </div>
+    <!--modals -->
+    <div id="change-photo-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 style="font-size: 1.5rem; padding: 1% 0;" class="modal-title">Resim Seçin</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div style="text-align: left; padding: 5% 4%;" class="modal-body">
+            <p style="font-size: 1.1rem; color: #37474f;">Bilgisayarınızdaki mevcut bir resmi ekleyin.</p>
+            <label style="color: #455a64;" for="imgFile" class="form-label">Seçilen Resim</label>
+            <input class="form-control" type="file" id="imgFile">
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary upload-btn" name="button">Yükle <i class="fas fa-upload"></i></button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- cart modal -->
@@ -188,6 +218,45 @@
             <button id="delete-all-items" type="button" class="btn btn-danger">Sepeti Sıfırla</button>
             <button id="end-shopping" type="button" class="btn btn-success">Alışverişi Tamamla</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- toasts -->
+    <!-- photo delete toast -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="img-toast-delete" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="img-toast-delete" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          <h6 style="text-align: left;"> Profil fotoğrafınız başarıyla silindi. <i class="fas fa-check-circle" style="color: green;"></i></h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- changes saved toast -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="save-changes-toast-success" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="img-toast-delete" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          <h6 style="text-align: left;"> Değişiklikler başarıyla kaydedildi. <i class="fas fa-check-circle" style="color: green;"></i></h6>
+        </div>
+      </div>
+    </div>
+    <!-- fail -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="save-changes-toast-fail" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto" style="color: #FACF5A;">e-Commerce</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="img-toast-delete" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          <h6 style="text-align: left;"> Lütfen formdaki eksikleri gideriniz. <i class="fas fa-exclamation-circle" style="color: #ff6f00;"></i></h6>
         </div>
       </div>
     </div>
