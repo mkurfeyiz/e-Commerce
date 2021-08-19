@@ -46,6 +46,15 @@ a:hover{
   text-decoration: underline;
 }
 
+.error-text{
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  display: none;
+  color: red;
+}
+
 .card{
   -webkit-box-shadow: 1px 1px 10px #233142;
         box-shadow: 1px 1px 10px #233142;

@@ -35,27 +35,34 @@
           <div class="mb-3">
             <label for="fname" class="form-label">İsim</label>
             <input type="text" class="form-control" id="fname" placeholder="İsminiz" required>
+            <p id="fname-error" class="error-text">*İsim alanı boş bırakılamaz.</p>
           </div>
           <div class="mb-3">
             <label for="lname" class="form-label">Soyisim</label>
             <input type="text" class="form-control" id="lname" placeholder="Soyisminiz" required>
+            <p id="lname-error" class="error-text">*Soyisim alanı boş bırakılamaz.</p>
           </div>
           <div class="mb-3">
             <label for="phone" class="form-label">Telefon</label>
             <input type="text" class="form-control" id="phone" placeholder="+9012345678" required>
+            <p id="phone-error" class="error-text">*Telefon alanı boş bırakılamaz.</p>
           </div>
           <div class="mb-3">
             <label for="emailInput" class="form-label">Email Adresi</label>
             <input type="email" class="form-control" id="emailInput" placeholder="ornek@ornek.com" required>
+            <p id="email-error" class="error-text">*E-mail alanı boş bırakılamaz.</p>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Şifre</label>
             <input type="password" class="form-control" id="password" required>
+            <p id="password-error" class="error-text">*Şifre alanı boş bırakılamaz.</p>
           </div>
           <div class="mb-3">
             <label for="password2" class="form-label">Şifre Tekrar</label>
             <input type="password" class="form-control" id="password2" required>
+            <p id="password2-error" class="error-text">*Şifrenizi tekrar giriniz.</p>
           </div>
+          <p id="passwords-match-error" class="error-text"> -Şifreler eşleşmiyor.</p>
           <button class="btn btn-danger signup-btn">Üye Ol</button>
           <h4 class="card-subtitle mb-2 text-muted">Zaten üye misiniz? <a href="login.html">Oturum Açın</a></h4>
 
