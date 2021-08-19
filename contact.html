@@ -94,21 +94,29 @@
     <form action="main.html" method="post">
       <div class="mb-3">
         <label for="fname" class="form-label">İsim</label>
-        <input type="text" class="form-control" id="fname" placeholder="İsminiz" required>
+        <input type="text" class="form-control" id="fname" placeholder="İsim" required>
+        <p id="fname-error" class="error-text">*Lütfen isminizi giriniz.</p>
       </div>
       <div class="mb-3">
         <label for="lname" class="form-label">Soyisim</label>
-        <input type="text" class="form-control" id="lname" placeholder="Soyisminiz" required>
+        <input type="text" class="form-control" id="lname" placeholder="Soyisim" required>
+        <p id="lname-error" class="error-text">*Lütfen soyisminizi giriniz.</p>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Telefon</label>
+        <input type="text" class="form-control" id="phone" placeholder="Telefon" required>
+        <p id="phone-error" class="error-text">*Lütfen telefon numaranızı giriniz.</p>
       </div>
       <div class="mb-3">
         <label for="emailInput" class="form-label">Email Adresi</label>
-        <input type="email" class="form-control" id="emailInput1" placeholder="ornek@ornek.com" required>
+        <input type="email" class="form-control" id="emailInput1" placeholder="E-mail" required>
+        <p id="email-error" class="error-text">*Lütfen e-mail adresinizi giriniz.</p>
       </div>
       <div class="mb-3">
         <label for="messageArea" class="form-label">Mesaj</label>
-        <textarea class="form-control" id="messageArea" rows="4"></textarea>
+        <textarea class="form-control" id="messageArea" rows="4" placeholder="Mesaj"></textarea>
       </div>
-      <button type="submit" class="btn btn-danger">Gönder</button>
+      <button type="submit" class="btn btn-danger send-btn">Gönder</button>
     </form>
 
     <section id="info-section">
