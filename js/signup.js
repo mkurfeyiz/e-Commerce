@@ -79,6 +79,6 @@ function signupControls() {
     console.log("successfully created an account");
   } else {
     //fail toast
-    console.log("Account creation failed")
+    console.log("Account creation failed");
   }
 }
