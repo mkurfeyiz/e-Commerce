@@ -62,7 +62,7 @@
             <li class="nav-item dropdown">
               <div class="btn-group" role="group">
 
-                <button id="profile" class="btn btn-lg btn-outline-light dropdown-toggle nav-link" data-bs-toggle="dropdown"><i class="nav-icon fas fa-user-alt"></i></button>
+                <button id="profile-btn" class="btn btn-lg btn-outline-light dropdown-toggle nav-link" data-bs-toggle="dropdown"><i class="nav-icon fas fa-user-alt"></i></button>
                 <!-- account dropdown -->
                 <ul class="dropdown-menu">
                   <li class="dropdown-item">
@@ -75,7 +75,7 @@
                     <a id="quit-link" href="Javascript:void(0);" class="dropdown-item">Çıkış <i class="exit-icon fas fa-sign-out-alt"></i></a>
                   </li>
                 </ul>
-                <button type="button" id="cart" class="btn btn-lg btn-outline-light nav-link"><i class="nav-icon fas fa-shopping-cart"></i>
+                <button type="button" id="cart-btn" class="btn btn-lg btn-outline-light nav-link"><i class="nav-icon fas fa-shopping-cart"></i>
                   <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
                 </button>
               </div>
@@ -90,6 +90,109 @@
 
   </section>
 
+  <!-- profile settings -->
+  <div id="profile-div">
+
+    <h5>Profil Ayarları</h5>
+    <hr>
+    <div class="row profile-row">
+      <!-- photo -->
+      <div class="col-md-4 photo-col">
+        <img class="profile-photo" src="images/profile_photo.jpg" alt="profile_photo.jpg">
+      </div>
+      <!-- buttons -->
+      <div class="col-md-6 change">
+        <div class="row btn-row">
+          <div class="col-md-12 btn-col">
+            <button class="btn btn-primary change-btn" type="button" name="button">Resmi Değiştir</button>
+          </div>
+          <div class="col-md-12 btn-col">
+            <button class="btn btn-danger delete-btn" type="button" name="button">Resmi Sil</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+
+      </div>
+      <!-- end of first row -->
+
+      <!-- second row -->
+      <div class="col-md-12 name-col">
+        <div class="row name-row">
+          <div class="col col-md-6">
+            <label for="fname" class="form-label">İsim</label>
+            <input id="fname" class="form-control" type="text" name="fname" value="" placeholder="İsim">
+          </div>
+          <div class="col col-md-6">
+            <label for="lname" class="form-label">Soyisim</label>
+            <input id="lname" class="form-control" type="text" name="lname" value="" placeholder="Soyisim">
+          </div>
+
+          <div class="col col-md-12">
+            <label for="phone" class="form-label">Telefon</label>
+            <input id="phone" class="form-control" type="text" name="phone" value="" placeholder="Telefon">
+          </div>
+
+          <div class="col col-md-12">
+            <label for="email" class="form-label">E-mail</label>
+            <input id="email" class="form-control" type="email" name="email" value="" placeholder="E-mail">
+          </div>
+
+          <div class="col col-md-6">
+            <label for="password" class="form-label">Şifre</label>
+            <input id="password" class="form-control" type="password" name="password" value="" placeholder="Şifre">
+          </div>
+          <div class="col col-md-6">
+            <label for="password2" class="form-label">Şifre Tekrar</label>
+            <input id="password2" class="form-control" type="password" name="password2" value="" placeholder="Şifre Tekrar">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-12 save-col">
+        <button class="btn btn-primary save-btn" type="button" name="button">Değişiklikleri Kaydet</button>
+      </div>
+
+    </div>
+
+    <!-- cart modal -->
+    <div id="cart-modal" class="modal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sepetim</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table id="cart-table" class="table table-danger">
+              <caption class="cart-sum">Toplam : </caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Ürün</th>
+                  <th scope="col">Adet</th>
+                  <th scope="col">Fiyat(TL)</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+              </tbody>
+
+            </table>
+
+          </div>
+          <div class="modal-footer">
+            <button id="delete-all-items" type="button" class="btn btn-danger">Sepeti Sıfırla</button>
+            <button id="end-shopping" type="button" class="btn btn-success">Alışverişi Tamamla</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <!-- footer section -->
   <section id="footer-section">

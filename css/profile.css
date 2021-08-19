@@ -1,0 +1,114 @@
+h5{
+  font-size: 3rem;
+  text-align: left;
+  padding: 1% 3%;
+  margin-bottom: 3%;
+  color: #455a64;
+}
+
+hr{
+  margin: 3% 0;
+}
+
+.profile-photo{
+  border: 4px solid #90a4ae;
+  border-radius: 50%;
+  width: 18rem;
+  height: auto;
+}
+
+.photo-col{
+  text-align: center;
+  padding: 0 7% 0 3%;
+}
+
+.change{
+  text-align: left;
+  vertical-align: middle;
+  padding: 3% 6% 0 6%;
+}
+
+.btn-col{
+  padding: 3% 0;
+}
+
+.change-btn, .delete-btn{
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 60%;
+  padding: 2.5% 1.5%;
+  margin-top: 2.5%;
+}
+
+.change-btn{
+  background-color: #4F9DA6;
+  border-color: #4F9DA6;
+}
+
+.change-btn:hover{
+  background-color: #00838f;
+  border-color: #00838f;
+}
+
+.change-btn:focus{
+  background-color: #00838f;
+  border-color: #00838f;
+}
+
+.delete-btn{
+  background-color: #FF5959;
+  border-color: #FF5959;
+}
+
+.delete-btn:hover{
+  background-color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+.delete-btn:focus{
+  background-color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+.save-btn{
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 1.3%;
+  background-color: #43a047;
+  border-color: #43a047;
+}
+
+.save-btn:hover{
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.save-btn:focus{
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.name-row{
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #455a64;
+}
+
+.name-col{
+  padding: 3% 2%;
+}
+
+.name-row > .col{
+  padding-top: 3%;
+}
+
+.save-col{
+  padding: 2%;
+}
+
+#profile-div{
+  font-family: 'Montserrat', sans-serif;
+  padding: 3% 7%;
+}
