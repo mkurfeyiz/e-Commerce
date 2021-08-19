@@ -197,6 +197,16 @@ p{
   color: red;
 }
 
+#cart-btn:hover, #profile-btn:hover{
+  background-color: #546e7a;
+  border-color: #fff;
+}
+
+#cart-btn:focus, #profile-btn:focus{
+  background-color: #546e7a;
+  border-color: #fff;
+}
+
 #footer-section{
   background-color: #233142;
   padding: 3% 7%;
@@ -204,11 +214,12 @@ p{
 
 #featured-section{
   background-color: #F7F3E9;
-  margin: 2%  0;
+  padding: 3.5% 1%;
 }
 
 #category-section{
   background-color: #233142;
+  padding: 3% 7%;
 }
 
 #site-name{
