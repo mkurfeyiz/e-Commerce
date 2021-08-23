@@ -107,14 +107,14 @@
               <div class="collapse show" id="gender-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="woman-check">
-                    <label class="form-check-label" for="shirt-check">
+                    <input class="form-check-input gender-check" type="checkbox" value="Kadın" id="woman-check">
+                    <label class="form-check-label" for="woman-check">
                       Kadın
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="man-check">
-                    <label class="form-check-label" for="shirt-check">
+                    <input class="form-check-input gender-check" type="checkbox" value="Erkek" id="men-check">
+                    <label class="form-check-label" for="men-check">
                       Erkek
                     </label>
                   </li>
@@ -187,44 +187,43 @@
               <div class="collapse" id="orders-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li>
-                    <input class="form-check-input price" type="checkbox" value="" id="050-check">
+                    <input class="form-check-input price" type="checkbox" value="50" id="050-check">
                     <label class="form-check-label" for="050-check">
                       0-50 TL
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input price" type="checkbox" value="" id="50100-check">
+                    <input class="form-check-input price" type="checkbox" value="100" id="50100-check">
                     <label class="form-check-label" for="50100-check">
                       50-100 TL
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input price" type="checkbox" value="" id="100150-check">
+                    <input class="form-check-input price" type="checkbox" value="150" id="100150-check">
                     <label class="form-check-label" for="100150-check">
                       100-150 TL
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input price" type="checkbox" value="" id="150200-check">
+                    <input class="form-check-input price" type="checkbox" value="200" id="150200-check">
                     <label class="form-check-label" for="150200-check">
                       150-200 TL
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input price" type="checkbox" value="" id="200250-check">
+                    <input class="form-check-input price" type="checkbox" value="250" id="200250-check">
                     <label class="form-check-label" for="200250-check">
                       200-250 TL
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input price" type="checkbox" value="" id="250300-check">
+                    <input class="form-check-input price" type="checkbox" value="300" id="250300-check">
                     <label class="form-check-label" for="250300-check">
                       250-300 TL
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input price" type="checkbox" value="" id="other-check">
-                    <label class="form-check-label" for="other-check">
+                    <label class="form-check-label">
                       Diğer :
                       <input class="form-check-input" type="number" value="0" id="min-price" placeholder="min">
                       -
@@ -235,7 +234,7 @@
                 </ul>
               </div>
             </li>
-
+            <!-- brands -->
             <li class="mb-1">
               <button class="btn btn-header btn-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#brand-collapse" aria-expanded="false">
                 Marka
@@ -244,37 +243,31 @@
               <div class="collapse" id="brand-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="allbrand-check">
-                    <label class="form-check-label" for="allbrand-check">
-                      Tüm Markalar
-                    </label>
-                  </li>
-                  <li>
-                    <input class="form-check-input" type="checkbox" value="" id="koton">
+                    <input class="form-check-input brand" type="checkbox" value="koton" id="koton">
                     <label class="form-check-label" for="koton">
                       Koton
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="mavi">
+                    <input class="form-check-input brand" type="checkbox" value="mavi" id="mavi">
                     <label class="form-check-label" for="mavi">
                       Mavi
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="lcw">
+                    <input class="form-check-input brand" type="checkbox" value="lc waikiki" id="lcw">
                     <label class="form-check-label" for="lcw">
                       LC Waikiki
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="mango">
+                    <input class="form-check-input brand" type="checkbox" value="mango" id="mango">
                     <label class="form-check-label" for="mango">
                       Mango
                     </label>
                   </li>
                   <li>
-                    <input class="form-check-input" type="checkbox" value="" id="zara">
+                    <input class="form-check-input brand" type="checkbox" value="zara" id="zara">
                     <label class="form-check-label" for="zara">
                       Zara
                     </label>
@@ -340,7 +333,9 @@
               <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Tişört </h5>
-                <h6 class="card-subtitle mb-2 text-muted">45.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title price-title">45.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Kadın </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Zara </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -352,7 +347,9 @@
               <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Eşofman </h5>
-                <h6 class="card-subtitle mb-2 text-muted">45.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">45.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Kadın </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">LC Waikiki </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -364,7 +361,9 @@
               <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Atkı </h5>
-                <h6 class="card-subtitle mb-2 text-muted">55.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">50.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Erkek </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Mango </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -376,7 +375,9 @@
               <img src="images/tshirt2.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Pantolon </h5>
-                <h6 class="card-subtitle mb-2 text-muted">150.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">170.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Erkek </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Mavi </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -388,7 +389,9 @@
               <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Gömlek </h5>
-                <h6 class="card-subtitle mb-2 text-muted">105.50 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">105.50 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Erkek </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Koton </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -401,7 +404,9 @@
               <img src="images/man-tshirt.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Gömlek </h5>
-                <h6 class="card-subtitle mb-2 text-muted">105.51 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">200.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Erkek </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Mavi </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -414,7 +419,9 @@
               <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Gömlek </h5>
-                <h6 class="card-subtitle mb-2 text-muted"> 75.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title"> 75.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Kadın </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Koton </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -426,7 +433,9 @@
               <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Pantolon </h5>
-                <h6 class="card-subtitle mb-2 text-muted">100.00 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">249.99 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Kadın </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Mavi </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -438,7 +447,9 @@
               <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Ceket </h5>
-                <h6 class="card-subtitle mb-2 text-muted">68.90 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">68.90 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Kadın </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">LC Waikiki </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>
@@ -450,7 +461,9 @@
               <img src="images/tshirt3.jpg" class="card-img-top featured-img" alt="tshirt">
               <div class="card-body">
                 <h5 class="card-title">Ceket </h5>
-                <h6 class="card-subtitle mb-2 text-muted">60.90 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted price-title">260.90 TL </h6>
+                <h6 class="card-subtitle mb-2 text-muted gender-title">Kadın </h6>
+                <h6 class="card-subtitle mb-2 text-muted brand-title">Zara </h6>
                 <!-- direct to modals -->
                 <a href="#shop-div" class="btn inspect-btn">İncele <i class="fas fa-eye"></i></a>
               </div>

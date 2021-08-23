@@ -19,6 +19,10 @@ p{
   font-weight: 300;
 }
 
+ .brand-title {
+  font-style: italic;
+}
+
 .list-unstyled > li{
   padding-top: 1.5%;
   font-size: 1.1rem;
