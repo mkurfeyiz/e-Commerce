@@ -475,7 +475,7 @@
 
       <!-- cart modal -->
       <div id="cart-modal" class="modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Sepetim</h5>
@@ -488,6 +488,8 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Ürün</th>
+                    <th scope="col">Marka</th>
+                    <th scope="col">Cinsiyet</th>
                     <th scope="col">Adet</th>
                     <th scope="col">Fiyat(TL)</th>
                     <th scope="col"></th>
@@ -508,7 +510,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- inspect modal -->
@@ -521,7 +522,9 @@
           </div>
           <div class="modal-body">
             <img class="inspect-img" src="" alt="item.jpg">
-            <h6 class="inspect-text modal-price">Fiyat : </h6>
+            <h6 class="inspect-text brand">Marka : <span class="modal-brand"></span> </h6>
+            <h6 class="inspect-text price">Fiyat : <span class="modal-price"></span></h6>
+            <h6 class="inspect-text gender">Cinsiyet : <span class="modal-gender"></span></h6>
             <h6 class="inspect-text modal-count">Adet :
               <div class="btn-group" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-secondary decrease">-</button>
@@ -529,12 +532,12 @@
                 <button type="button" class="btn btn-secondary increase">+</button>
               </div>
             </h6>
-            <h6 class="inspect-text description">Ürün Açıklaması : <h6 class="inspect-text modal-caption"></h6>
+            <h6 class="inspect-text description">Ürün Açıklaması : <span class="modal-caption"></span>
             </h6>
           </div>
           <div class="modal-footer">
             <!--
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
             <button type="button" id="add-to-cart" class="btn btn-success">Sepete Ekle <i class="fas fa-plus-circle"></i>
             </button>
           </div>

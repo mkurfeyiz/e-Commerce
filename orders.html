@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-md navbar-dark" id="nav-main">
         <a href="#navbar-section" class="navbar-brand" id="site-name">e-Commerce</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -90,7 +90,7 @@
 
   </section>
 
-  <div id="orders-div" class="container-fluid">
+  <div id="orders-div" class="container container-md">
     <h3>Aktif Siparişlerim</h3>
     <!-- active orders -->
     <div id="active-orders" class="table order-div">
@@ -99,8 +99,10 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Ürün</th>
+            <th scope="col">Marka</th>
+            <th scope="col">Cinsiyet</th>
             <th scope="col">Adet</th>
-            <th scope="col">Fiyat</th>
+            <th scope="col">Fiyat(TL)</th>
             <th scope="col">Tarih</th>
           </tr>
         </thead>
@@ -111,6 +113,12 @@
             <td class="order-item order-item-name">
               <h5>Tişört1</h5>
             </td>
+            <td class="order-item order-item-brand">
+              <h5>Mavi</h5>
+            </td>
+            <td class="order-item order-item-gender">
+              <h5>Kadın</h5>
+            </td>
             <td class="order-item order-item-count">
               <h5>1</h5>
             </td>
@@ -127,20 +135,11 @@
             <td class="order-item order-item-name">
               <h5>Tişört1</h5>
             </td>
-            <td class="order-item order-item-count">
-              <h5>1</h5>
+            <td class="order-item order-item-brand">
+              <h5>Mavi</h5>
             </td>
-            <td class="order-item order-item-price">
-              <h5>15 TL</h5>
-            </td>
-            <td class="order-item order-item-date">
-              <h5>11.08.2021</h5>
-            </td>
-          </tr>
-          <tr class="table table-light">
-            <td class="order-item"><img class="order-img" src="images/tshirt3.jpg" alt=""></td>
-            <td class="order-item order-item-name">
-              <h5>Tişört1</h5>
+            <td class="order-item order-item-gender">
+              <h5>Kadın</h5>
             </td>
             <td class="order-item order-item-count">
               <h5>1</h5>
@@ -156,6 +155,33 @@
             <td class="order-item"><img class="order-img" src="images/tshirt3.jpg" alt=""></td>
             <td class="order-item order-item-name">
               <h5>Tişört1</h5>
+            </td>
+            <td class="order-item order-item-brand">
+              <h5>Koton</h5>
+            </td>
+            <td class="order-item order-item-gender">
+              <h5>Kadın</h5>
+            </td>
+            <td class="order-item order-item-count">
+              <h5>1</h5>
+            </td>
+            <td class="order-item order-item-price">
+              <h5>15 TL</h5>
+            </td>
+            <td class="order-item order-item-date">
+              <h5>11.08.2021</h5>
+            </td>
+          </tr>
+          <tr class="table table-light">
+            <td class="order-item"><img class="order-img" src="images/tshirt3.jpg" alt=""></td>
+            <td class="order-item order-item-name">
+              <h5>Tişört1</h5>
+            </td>
+            <td class="order-item order-item-brand">
+              <h5>Mango</h5>
+            </td>
+            <td class="order-item order-item-gender">
+              <h5>Erkek</h5>
             </td>
             <td class="order-item order-item-count">
               <h5>1</h5>
@@ -179,8 +205,10 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Ürün</th>
+            <th scope="col">Marka</th>
+            <th scope="col">Cinsiyet</th>
             <th scope="col">Adet</th>
-            <th scope="col">Fiyat</th>
+            <th scope="col">Fiyat(TL)</th>
             <th scope="col">Tarih</th>
           </tr>
         </thead>
@@ -191,6 +219,12 @@
             <td class="order-item order-item-name">
               <h5>Tişört1</h5>
             </td>
+            <td class="order-item order-item-brand">
+              <h5>Mango</h5>
+            </td>
+            <td class="order-item order-item-gender">
+              <h5>Erkek</h5>
+            </td>
             <td class="order-item order-item-count">
               <h5>1</h5>
             </td>
@@ -207,20 +241,11 @@
             <td class="order-item order-item-name">
               <h5>Tişört1</h5>
             </td>
-            <td class="order-item order-item-count">
-              <h5>1</h5>
+            <td class="order-item order-item-brand">
+              <h5>Mango</h5>
             </td>
-            <td class="order-item order-item-price">
-              <h5>15 TL</h5>
-            </td>
-            <td class="order-item order-item-date">
-              <h5>11.08.2021</h5>
-            </td>
-          </tr>
-          <tr class="table table-light">
-            <td class="order-item"><img class="order-img" src="images/tshirt3.jpg" alt=""></td>
-            <td class="order-item order-item-name">
-              <h5>Tişört1</h5>
+            <td class="order-item order-item-gender">
+              <h5>Erkek</h5>
             </td>
             <td class="order-item order-item-count">
               <h5>1</h5>
@@ -236,6 +261,33 @@
             <td class="order-item"><img class="order-img" src="images/tshirt3.jpg" alt=""></td>
             <td class="order-item order-item-name">
               <h5>Tişört1</h5>
+            </td>
+            <td class="order-item order-item-brand">
+              <h5>Mango</h5>
+            </td>
+            <td class="order-item order-item-gender">
+              <h5>Erkek</h5>
+            </td>
+            <td class="order-item order-item-count">
+              <h5>1</h5>
+            </td>
+            <td class="order-item order-item-price">
+              <h5>15 TL</h5>
+            </td>
+            <td class="order-item order-item-date">
+              <h5>11.08.2021</h5>
+            </td>
+          </tr>
+          <tr class="table table-light">
+            <td class="order-item"><img class="order-img" src="images/tshirt3.jpg" alt=""></td>
+            <td class="order-item order-item-name">
+              <h5>Tişört1</h5>
+            </td>
+            <td class="order-item order-item-brand">
+              <h5>Mango</h5>
+            </td>
+            <td class="order-item order-item-gender">
+              <h5>Erkek</h5>
             </td>
             <td class="order-item order-item-count">
               <h5>1</h5>
@@ -253,7 +305,7 @@
     </div>
 
     <div id="cart-modal" class="modal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">Sepetim</h5>
@@ -266,6 +318,8 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Ürün</th>
+                  <th scope="col">Marka</th>
+                  <th scope="col">Cinsiyet</th>
                   <th scope="col">Adet</th>
                   <th scope="col">Fiyat(TL)</th>
                   <th scope="col"></th>
@@ -286,6 +340,7 @@
         </div>
       </div>
     </div>
+  </div>
 
   </div>
 

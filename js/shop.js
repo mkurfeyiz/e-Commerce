@@ -2,24 +2,6 @@ var items = $(".shop-row .col-md-4");
 var shopItems = [];
 var shopRow = $(".shop-row");
 
-//console.log($(".category:not(:checked)"));
-
-//hover animation
-$("#items .card").hover(function() {
-  //console.log($(this).siblings("img"));
-  //shadowing
-  $(this).css("box-shadow", "4px 4px 2px #cfd8dc");
-  //zoom-in
-  $(this).children("img").css("transform", "scale(1.02)");
-
-}, function() {
-  //unshadowing
-  $(this).css("box-shadow", "");
-
-  //zoom-out
-  $(this).children("img").css("transform", "scale(1)");
-});
-
 //checkbox filters
 //filter variables
 //category
@@ -97,31 +79,6 @@ $(".price").click(function() {
 
   });
 });
-
-/*$(".price").change(function() {
-  $(".price:not(:checked)").each(function() {
-    priceValue = parseFloat($(this).val());
-    while (jQuery.inArray(priceValue, filterPrice) > -1) {
-      filterPrice.splice(filterPrice.indexOf(priceValue), 1);
-    }
-  });
-
-  $("#items .col-md-4 .price-title").filter(function() {
-
-    var price = parseFloat($(this).text().trim());
-    minPrice = Math.min(...filterPrice) - 50;
-    maxPrice = Math.max(...filterPrice);
-
-    console.log(filterPrice);
-
-    if (filterPrice.length == 0) {
-      minPrice = 0;
-      maxPrice = Infinity;
-    }
-    $(this).parent().parent().parent().toggle(price >= minPrice && price < maxPrice);
-
-  });
-});*/
 
 //custom price filter
 $("#min-price, #max-price").change(function() {

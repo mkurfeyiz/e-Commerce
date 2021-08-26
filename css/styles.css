@@ -16,6 +16,18 @@ p{
   font-weight: 300;
 }
 
+.inspect-text{
+  font-weight: bold;
+}
+
+.modal-price, .modal-gender, .modal-brand, .modal-caption{
+  font-weight: 500;
+}
+
+.brand-title {
+ font-style: italic;
+}
+
 .nav-link{
   font-size: 1.2rem;
   width: 6.9rem;
@@ -198,12 +210,13 @@ p{
 }
 
 #cart-btn:hover, #profile-btn:hover{
-  background-color: #546e7a;
+  color: #fff;
+  background-color:#233142;
   border-color: #fff;
 }
 
 #cart-btn:focus, #profile-btn:focus{
-  background-color: #546e7a;
+  background-color: #233142;
   border-color: #fff;
 }
 

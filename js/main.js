@@ -1,14 +1,23 @@
-/*$(".subtitle").hover(function(){
-  $(this).css("background-color", "#4F9DA6");
-  }, function(){
-  $(this).css("background-color", "");
-}); hover code*/
-
 //inspect modal
-var itemImg, itemTitle, itemPrice, itemCaption, itemCount;
+var itemImg, itemTitle, itemPrice, itemCaption, itemCount, itemGender, itemBrand;
 var card, modalContent, modalBody, btnGroup;
 var itemsOnCart = JSON.parse(localStorage.getItem("itemsOnCart"));
 
+//hover animation
+$("#items .card, .featured-col .card").hover(function() {
+  //console.log($(this).siblings("img"));
+  //shadowing
+  $(this).css("box-shadow", "4px 4px 2px #cfd8dc");
+  //zoom-in
+  $(this).children("img").css("transform", "scale(1.02)");
+
+}, function() {
+  //unshadowing
+  $(this).css("box-shadow", "");
+
+  //zoom-out
+  $(this).children("img").css("transform", "scale(1)");
+});
 
 //Modal codes
 //cart modal
@@ -29,6 +38,8 @@ function showCartItems() {
       '<tr class="table table-light">' +
       '<td class="cart-item"><img class="cart-item-img" src=' + item.image + ' alt=""> </td>' +
       '<td class="cart-item cart-item-name">' + item.name + '</td>' +
+      '<td class="cart-item cart-item-brand">' + item.brand + '</td>' +
+      '<td class="cart-item cart-item-gender">' + item.gender + '</td>' +
       '<td class="cart-item cart-item-count">' + item.count + '</td>' +
       '<td class="cart-item cart-item-price">' + (item.price * item.count) + '</td>' +
       '<td> <button type="button" class="btn delete-item"><i class="fas fa-times"></i></button></td>' +
@@ -86,14 +97,19 @@ $(".inspect-btn").click(function() {
   //console.log(card);
   itemImg = card.children(".card").children("img").attr("src");
   itemTitle = card.children("div").children("div").children("h5").text();
-  itemPrice = parseFloat(card.children("div").children("div").children("h6").text());
+  itemPrice = parseFloat(card.children("div").children("div").children(".price-title").text());
+  itemGender = card.children("div").children("div").children(".gender-title").text();
+  itemBrand = card.children("div").children("div").children(".brand-title").text();
   itemCaption = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pulvinar at magna sit amet pretium. Donec orci tellus,iaculis sit amet blandit vulputate, laoreet in arcu. Morbi lobortis nibh nulla vitae accumsan massa faucibus nec";
+
   //console.log(itemTitle+" "+itemPrice);
 
   modalContent.children(".modal-header").children("h5").text(itemTitle);
   //item img, price, caption
   modalBody.children("img").attr("src", itemImg);
-  modalBody.children(".modal-price").text("Fiyat : " + itemPrice + " TL");
+  modalBody.children(".price").children(".modal-price").text(itemPrice + " TL");
+  modalBody.children(".gender").children(".modal-gender").text(itemGender);
+  modalBody.children(".brand").children(".modal-brand").text(itemBrand);
   modalBody.children(".description").html("Ürün Açıklaması : " + '<h6 class="inspect-text modal-caption">' + itemCaption + '</h6>');
 
   $("#inspect-modal").modal("show");
@@ -149,7 +165,9 @@ $("#add-to-cart").click(function() {
     'name': itemTitle,
     'count': itemCount,
     'price': itemPrice,
-    'image': itemImg
+    'image': itemImg,
+    'gender': itemGender,
+    'brand': itemBrand
   };
   if (item.count > 0) {
     itemsOnCart.push(item);
